@@ -33,34 +33,5 @@ Then('the user enters {int} in the second input', function (secondInput) {
   });
 
 Then('the result should be {string}', function (result) {
-	//console.log(specPage.getResult());
 	expect(specPage.getResult()).to.eventually.equal(result);
   });
-
-// Negative test
-
-  /*Then('the user enters {string} in the first input', function (str1) {
-	  specPage.setFirstInput(str1)
-  });
-
-  Then('he selects {string} operator', function (operator1) {
-		element(by.model('operator')).click();
-			element.all(by.css("option")).each(function(item) {
-					 item.getText().then(function(text) {
-						if(text == operator1) {
-							item.click();
-						}
-					})
-				})	
-	  });
-
-
-  Then('the user enters {string} in the second input', function (str2) {
-	  specPage.setSecondInput(str2);
-	  specPage.onSubmit();
-  });  
-
-  Then('the result should be {string}', function (result1) {
-		//console.log(specPage.getResult());
-		expect(specPage.getResult()).to.eventually.equal(result1);
-	  });*/

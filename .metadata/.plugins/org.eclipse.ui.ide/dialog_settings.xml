@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+		<item value="C:\Data\backendtesting"/>
+		<item value="C:\Data\new_venture"/>
+		<item value="C:\Data\Cucumber_Protractor\tests"/>
+	</list>
+</section>

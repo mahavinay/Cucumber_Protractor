@@ -20,7 +20,8 @@ exports.config = {
    * should be longer than the maximum time your application needs to
    * stabilize between tasks.
    */
-  allScriptsTimeout: 10000,
+  allScriptsTimeout: 60 * 10000,
+ 
   baseUrl:'http://juliemr.github.io/protractor-demo/',
  /**
    * Test framework to use. This may be one of: jasmine, mocha or custom.
@@ -43,7 +44,7 @@ exports.config = {
   frameworkPath: require.resolve('protractor-cucumber-framework'),  // path relative to the current config file
 
   specs: [
-    './tests/e2e/features/*.feature'     // Specs here are the cucumber feature files
+    './tests/e2e/features/negativetestcase.feature'     // Specs here are the cucumber feature files
   ],
   /**
    * If true, protractor will restart the browser between each test. Default
@@ -90,11 +91,13 @@ exports.config = {
    *      console.log('Executing capability', config.capabilities);
    *    });
    */
+   
   onPrepare: function () {
-    const {Given, Then, When, Before} = require('cucumber');
+    const {Given, Then, When, Before, setDefaultTimeout} = require('cucumber');
     global.Given = Given;
     global.When = When;
     global.Then = Then;
     global.Before = Before;
+	
   }
 };

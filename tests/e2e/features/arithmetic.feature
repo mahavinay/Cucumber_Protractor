@@ -1,5 +1,6 @@
 Feature: Super calculator
 
+	
   Scenario Outline: Addition, Subtraction, Multiplication, Division, Modulo
     Given the user lands on "http://juliemr.github.io/protractor-demo/"
     Then the user enters <first_input> in the first input
@@ -14,3 +15,7 @@ Feature: Super calculator
       |           1 |            4 | "*"      | "4"    |
       |          50 |            5 | "/"      | "10"   |
       |           1 |           10 | "%"      | "1"    |
+
+    
+      
+      
